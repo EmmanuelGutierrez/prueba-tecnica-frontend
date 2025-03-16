@@ -1,0 +1,45 @@
+.seacrh-container {
+  background-color: var(--primary-light-blue);
+  border-radius: 15;
+  padding: 25;
+  min-height: 10rem;
+  align-content: center;
+}
+
+.search-input {
+  height: 3rem;
+  width: 25rem;
+  border-radius: 15;
+  border: solid 1px var(--background-dark);
+  transition: 0.3s;
+  outline: none;
+  padding: 12;
+  font-size: medium;
+}
+
+.search-input:focus {
+  border: solid 1.5px var(--primary-blue);
+}
+
+.seacrh-input-container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.seacrh-input-container p {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .seacrh-input-container {
+    flex-direction: column;
+  }
+  .seacrh-input-container p {
+    margin-top: 1rem;
+  }
+  .search-input {
+    width: 100%;
+  }
+}

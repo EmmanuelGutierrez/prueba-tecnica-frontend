@@ -1,0 +1,57 @@
+.element-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.element-info-text p {
+  font-size: 20;
+  margin: 0 20;
+}
+
+.element-info-image {
+  height: 6rem;
+  width: 6rem;
+}
+.element-info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12.5;
+}
+
+.element-info-delete {
+  background-color: transparent;
+  border: 0;
+  height: 30;
+  width: 30;
+}
+.trash-svg {
+  filter: invert(24%) sepia(89%) saturate(2306%) hue-rotate(337deg)
+    brightness(93%) contrast(85%);
+}
+.element-info-delete:active {
+  filter: invert(35%) sepia(19%) saturate(3281%) hue-rotate(326deg)
+    brightness(98%) contrast(110%);
+}
+
+.element-total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element-total-number {
+  margin: 0 1rem;
+}
+
+.element-total-button {
+  background-color: var(--secondary-orange);
+  border: 0;
+  height: 30;
+  width: 30;
+}
+
+.element-total-button:active {
+  background-color: var(--secondary-dark-orange);
+}

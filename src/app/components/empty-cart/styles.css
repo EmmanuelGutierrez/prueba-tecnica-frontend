@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.empty-cart-container {
+  display: flex;
+  padding-top: 20;
+}
+.empty-cart-icon {
+  display: flex;
+  border-radius: 100%;
+  padding: 10;
+  height: 70;
+  width: 70;
+  background-color: var(--background-dark);
+  border: solid 1px var(--black-light);
+  margin-right: 15;
+}
+
+.empty-cart-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 15rem;
+}
+
+.buy-button{
+  margin-top: 1rem;
+  border-radius: 15;
+  background-color: var(--secondary-orange);
+  height: 40;
+  border: solid 1px var(--black-light);
+}
+
+.buy-button:active{
+  background-color: var(--secondary-dark-orange);
+}

@@ -1,0 +1,12 @@
+.chart-list-container {
+  display: flex;
+  flex-direction: column;
+}
+.chart-list-container > * {
+  border-top: 1px solid var(--black-light);
+  padding-bottom: 1rem;
+}
+
+/* .chart-list-container > *:last-child {
+  border-bottom: 0;
+} */

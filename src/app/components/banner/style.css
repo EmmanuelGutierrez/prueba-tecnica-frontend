@@ -1,0 +1,21 @@
+.banner-container {
+  margin-top: 1rem;
+  /* padding: 1rem 2rem 2rem; */
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: var(--background-dark);
+  border-radius: 15; */
+}
+
+.banner-container p {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .banner-container {
+    border-radius: 0;
+  }
+}
