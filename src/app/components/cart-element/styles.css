@@ -1,3 +1,6 @@
+.element-container{
+  min-width: 325;
+}
 .element-info {
   display: flex;
   justify-content: space-between;
@@ -11,7 +14,7 @@
 
 .element-info-image {
   height: 6rem;
-  width: 6rem;
+  width: 8rem;
 }
 .element-info-image img {
   width: 100%;

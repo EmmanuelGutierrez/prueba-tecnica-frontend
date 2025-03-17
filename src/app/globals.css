@@ -64,8 +64,40 @@ a {
   text-decoration: none;
 }
 
+.buy-button{
+  margin-top: 1rem;
+  border-radius: 15;
+  background-color: var(--secondary-orange);
+  height: 40;
+  min-width: 70;
+  border: solid 1px var(--black-light);
+}
+
+.buy-button:active{
+  background-color: var(--secondary-dark-orange);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.show-responsive {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+
+  .show {
+    display: none;
+  }
+
+  .show-responsive {
+    display: flex;
   }
 }

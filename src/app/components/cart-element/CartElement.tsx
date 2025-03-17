@@ -1,13 +1,29 @@
+"use client";
 import { ProductI } from "@/common/interfaces/product.interface";
 import React from "react";
 import "./styles.css";
 import Image from "next/image";
+import { useProductStore } from "@/app/zustand/hooks/useProductStore";
 
 interface ChartElementPropsI {
   item: ProductI;
+  total: number;
 }
 
-export const CartElement = ({ item }: ChartElementPropsI) => {
+export const CartElement = ({ item, total }: ChartElementPropsI) => {
+  const { addProduct, removeProduct, deleteProduct } = useProductStore(
+    (state) => state
+  );
+  const handleAddProduct = () => {
+    addProduct(item);
+  };
+
+  const handleRemoveProduct = () => {
+    removeProduct(item.id);
+  };
+  const handleDeleteProduct = () => {
+    deleteProduct(item.id);
+  };
   return (
     <div className="element-container">
       <div className="element-info">
@@ -18,7 +34,7 @@ export const CartElement = ({ item }: ChartElementPropsI) => {
           <p className="element-info-title">{item.titulo}</p>
           <p className="element-info-price">{item.precio}</p>
         </div>
-        <button className="element-info-delete">
+        <button className="element-info-delete" onClick={handleDeleteProduct}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -30,7 +46,7 @@ export const CartElement = ({ item }: ChartElementPropsI) => {
         </button>
       </div>
       <div className="element-total">
-        <button className="element-total-button">
+        <button className="element-total-button" onClick={handleRemoveProduct}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -41,9 +57,9 @@ export const CartElement = ({ item }: ChartElementPropsI) => {
             <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
           </svg>
         </button>
-        <p className="element-total-number">5</p>
+        <p className="element-total-number">{total}</p>
 
-        <button className="element-total-button">
+        <button className="element-total-button" onClick={handleAddProduct}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"

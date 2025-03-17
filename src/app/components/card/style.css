@@ -5,15 +5,38 @@
   padding: 20;
   border-radius: 25;
   color: white;
+  cursor: pointer;
 }
 
 .card-container-image {
   height: 200;
+  overflow: hidden;
+  border-radius: 12.5;
+  position: relative;
+  background-color: white;
 }
+
+.card-favorite {
+  height: 35;
+  width: 35;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  background-color: var(--primary-light-blue);
+  border-radius: 100%;
+  padding: 5;
+  border: 0;
+}
+
 .card-container-image img {
   width: 100%;
   object-fit: cover;
-  border-radius: 12.5;
+
+  transition: 0.3s ease;
+}
+
+.card-container:hover img {
+  transform: scale(1.5);
 }
 
 .card-info-header {
@@ -23,7 +46,7 @@
   margin-top: 10;
 }
 
-.card-header-data{
+.card-header-data {
   height: 60;
 }
 
@@ -38,7 +61,6 @@
   display: flex;
   align-items: center;
 }
-
 
 .card-header-rating p {
   font-size: 25;

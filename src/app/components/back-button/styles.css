@@ -1,0 +1,22 @@
+.back-button {
+  background-color: var(--primary-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10;
+  border-radius: 15;
+  border: solid 1px var(--black-light);
+  height: 50;
+  width: 150;
+  margin-top: 1rem;
+  color: white;
+}
+
+.back-button:active {
+  background-color: var(--primary-dark-blue);
+}
+
+.back-button svg {
+  height: 30;
+  margin-right: 10;
+}

@@ -24,14 +24,3 @@
   min-width: 15rem;
 }
 
-.buy-button{
-  margin-top: 1rem;
-  border-radius: 15;
-  background-color: var(--secondary-orange);
-  height: 40;
-  border: solid 1px var(--black-light);
-}
-
-.buy-button:active{
-  background-color: var(--secondary-dark-orange);
-}

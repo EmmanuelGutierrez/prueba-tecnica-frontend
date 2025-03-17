@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
-
-export default function Home() {
+const NotFound = () => {
   redirect("/main");
-}
+};
+
+export default NotFound;
